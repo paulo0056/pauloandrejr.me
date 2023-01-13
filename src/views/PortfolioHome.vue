@@ -24,12 +24,9 @@
       <v-container
         ><v-row>
           <v-col cols="6">
-            <p class="title-profile mt-12">Olá,</p>
-            <p class="subtitle-profile">Eu sou Paulo André</p>
-            <p class="description-profile">
-              Eu sou um programador com mais de 4 anos de experiencia. Minha
-              expertise está no desenvolvimento front-end de aplicações web.
-            </p>
+            <!--             <p class="title-profile mt-12">Olá,</p> -->
+            <p class="subtitle-profile">Paulo André</p>
+            <p class="description-profile">Desenvolvedor Front-End</p>
             <v-btn color="green" class="white--text mt-5"
               >Me contrate</v-btn
             ></v-col
@@ -38,11 +35,43 @@
             <div class="img-profile">
               <img src="../assets/img-teste.png" alt="profile-img" />
             </div>
-
-            /></v-col
-          >
-        </v-row></v-container
-      >
+          </v-col>
+        </v-row>
+        <v-row class="row-custom">
+          <v-col cols="6">
+            <v-row justify="center">
+              <img
+                src="../assets/vue-logo3.png"
+                height="250"
+                width="250"
+                alt="vue-logo"
+                class="vue-logo"
+              />
+            </v-row>
+            <v-row justify="center">
+              <img
+                src="../assets/js-logo.png"
+                class="jsts-logo mr-5"
+                alt="js-logo"
+              />
+              <img
+                src="../assets/ts-logo.png"
+                class="jsts-logo"
+                alt="ts-logo"
+              />
+            </v-row>
+          </v-col>
+          <v-col cols="6">
+            <v-row justify="center"> </v-row>
+          </v-col>
+        </v-row>
+        <v-row>
+          <v-col cols="6">
+            <v-row justify="center"> </v-row>
+          </v-col>
+          <v-col cols="6"> </v-col>
+        </v-row>
+      </v-container>
     </div>
   </div>
 </template>
@@ -54,9 +83,23 @@ export default Vue.extend({});
 </script>
 
 <style scoped lang="scss">
+.row-custom {
+  margin-top: 250px;
+}
+.vue-logo {
+  z-index: 1;
+}
+.jsts-logo {
+  z-index: 1;
+  height: 150px;
+  width: 150px;
+  border-radius: 10px;
+}
 .img-profile img {
   position: absolute;
   z-index: 1;
+  height: 420px;
+  width: 420px;
   border-radius: 50%;
   border: green 2px solid;
 }
@@ -108,7 +151,8 @@ export default Vue.extend({});
   font-family: "Roboto", sans-serif;
   margin-top: 100px; /* Add a top margin to avoid content overlay */
 }
-/* Config */
+
+/* Config BG Animated*/
 $color-bg: #1e1e1e;
 $color-particle: #fff;
 $spacing: 2560px;
