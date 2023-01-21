@@ -22,37 +22,45 @@
 
     <div class="main">
       <v-container
-        ><v-row>
-          <v-col cols="6">
-            <!--             <p class="title-profile mt-12">Olá,</p> -->
-            <p class="subtitle-profile">Paulo André</p>
-            <p class="description-profile">Desenvolvedor Front-End</p>
-            <v-btn color="green" class="white--text mt-5"
-              >Me contrate</v-btn
-            ></v-col
-          >
+        ><v-row class="row-custom-margin">
+          <v-col cols="6" class="hire-me-column">
+            <p class="title-profile mt-12">Olá,</p>
+            <p class="subtitle-profile">Eu me chamo Paulo André</p>
+            <p class="description-profile">
+              Sou um desenvolvedor front-end formado pela UNEB(Universidade do
+              Estado da Bahia) com mais de 4 anos de experiência. Tenho
+              trabalhado na area de desenvolvimento de sistemas e também de
+              gestão na epoca em que atuei como Presidente da Empresa Junior
+              Tecno System a qual sou conselheiro atualmente. Sou uma pessoa que
+              ama trabalhar em equipe e que tem uma fome gigantesca por
+              adiquirir novos conhecimentos. Desejo continuar agregando aonde
+              quer que eu passe com o meu trabalho e conhecimento para que eu
+              possa crescer profissionalmente cada vez mais e consiga alcançar
+              minhas ambições.
+            </p>
+            <v-btn color="green" class="white--text mt-5">Me contrate</v-btn>
+          </v-col>
           <v-col cols="6">
             <div class="img-profile">
-              <img src="../assets/img-teste.png" alt="profile-img" />
+              <img src="../assets/photo-2.png" alt="profile-img" />
             </div>
           </v-col>
         </v-row>
-        <v-row class="row-custom">
+        <v-row class="row-custom" align="center">
           <v-col cols="6">
-            <v-row justify="center">
+            <v-row justify="center" align="end">
+              <img
+                src="../assets/js-logo.png"
+                class="jsts-logo"
+                alt="js-logo"
+              />
               <img
                 src="../assets/vue-logo3.png"
                 height="250"
-                width="250"
+                max-width="250"
+                style="margin-bottom: 100px"
                 alt="vue-logo"
                 class="vue-logo"
-              />
-            </v-row>
-            <v-row justify="center">
-              <img
-                src="../assets/js-logo.png"
-                class="jsts-logo mr-5"
-                alt="js-logo"
               />
               <img
                 src="../assets/ts-logo.png"
@@ -62,14 +70,132 @@
             </v-row>
           </v-col>
           <v-col cols="6">
-            <v-row justify="center"> </v-row>
+            <p class="title-profile mt-12">
+              <span style="color: white">Eu sou um</span> Programador
+            </p>
+
+            <p class="description-profile">
+              Minha stack de tecnologias atual é Html, CSS, JavaScript,
+              TypeScript e Vue, mas tenho conhecimentos e projetos também na
+              área de desenvolvimento com wordpress, php e react e em
+              desenvolvimento mobile com o Flutter e modelagem de banco de dados
+              MySQL e MongoDB.
+            </p>
+            <v-row style="color: white">
+              <v-col cols="auto">Nome</v-col>
+              <v-col cols="auto">:</v-col>
+              <v-col cols="auto">Ṕaulo André Brito de Almeida Junior</v-col>
+            </v-row>
+            <v-row style="color: white">
+              <v-col cols="auto"
+                >Idade <span style="margin-left: 25px">:</span></v-col
+              >
+
+              <v-col cols="auto">23</v-col>
+            </v-row>
+
+            <v-row style="color: white">
+              <v-col cols="auto">E-mail</v-col>
+              <v-col cols="auto">:</v-col>
+              <v-col cols="auto">pauloandre.dev@gmail.com</v-col>
+            </v-row>
+            <v-row style="color: white">
+              <v-col cols="auto"
+                >Telefone <span style="margin-left: 3px">:</span></v-col
+              >
+
+              <v-col cols="auto">(75) 992909426</v-col>
+            </v-row>
+            <v-btn color="green" class="white--text mt-5"
+              >Baixe meu Curriculo</v-btn
+            >
           </v-col>
         </v-row>
-        <v-row>
-          <v-col cols="6">
-            <v-row justify="center"> </v-row>
-          </v-col>
-          <v-col cols="6"> </v-col>
+        <v-row class="row-custom">
+          <v-col
+            ><span style="color: white; margin-left: 20px; font-size: 35px"
+              >Exp</span
+            >
+            <hr style="margin-left: 23px; max-width: 95%"
+          /></v-col>
+        </v-row>
+        <v-row justify="center">
+          <v-tabs
+            v-model="tab"
+            background-color="transparent"
+            style="max-width: 1100px"
+            dark
+          >
+            <v-tab>
+              <v-row justify="start">
+                <v-icon left> mdi-account </v-icon> GWCloud</v-row
+              >
+            </v-tab>
+            <v-tab>
+              <v-row justify="start">
+                <v-icon left> mdi-account </v-icon> Tecno System</v-row
+              >
+            </v-tab>
+          </v-tabs>
+
+          <v-tabs-items v-model="tab" dark>
+            <v-tab-item>
+              <v-card flat class="tab-custom">
+                <v-card-text style="color: white">
+                  <h2>Estagiário</h2>
+                  <h3 style="color: rgb(8, 228, 8); font-weight: 700">
+                    GWCloud
+                  </h3>
+                  <p style="font-size: 15px">2021</p>
+                  <p style="max-width: 1100px" class="exp-description">
+                    Participação das plainnings e atuando na programação
+                    front-end nos sistemas web da empresa, usando javascript,
+                    typescript, Vue e design patterns como DDD e TDD
+                  </p>
+                  <h2>Programador Junior</h2>
+                  <h3 style="color: rgb(8, 228, 8); font-weight: 700">
+                    GWCloud
+                  </h3>
+                  <p style="font-size: 15px">2022-Atualmente</p>
+                  <p style="max-width: 1100px" class="exp-description">
+                    Participação das plainnings e atuando na programação
+                    front-end nos sistemas web da empresa, usando javascript,
+                    typescript, Vue e design patterns como DDD e TDD
+                  </p>
+                </v-card-text>
+              </v-card>
+            </v-tab-item>
+            <v-tab-item>
+              <v-card flat class="tab-custom">
+                <v-card-text style="color: white">
+                  <h2>Programador</h2>
+                  <h3 style="color: rgb(8, 228, 8); font-weight: 700">
+                    Tecno System
+                  </h3>
+                  <p style="font-size: 15px">2020-2021</p>
+
+                  <p style="max-width: 1100px" class="exp-description">
+                    Desenvolvimento de sites com wordpress e programação dos
+                    sistemas da empresa desde a modelagem de banco de dados até
+                    a programação de back end e front end com Php, react e MySql
+                    , alem de participar do gerenciamento de projetos e
+                    acompanhamento de trainees.
+                  </p>
+                  <h2>Presidente</h2>
+                  <h3 style="color: rgb(8, 228, 8); font-weight: 700">
+                    Tecno System
+                  </h3>
+                  <p style="font-size: 15px">2021-2022</p>
+
+                  <p style="max-width: 1100px" class="exp-description">
+                    Criação de planejamento estratégico, controle financeiro,
+                    gestão de pessoas, atividades administrativas da empresa e
+                    gerenciamento de projetos
+                  </p>
+                </v-card-text>
+              </v-card>
+            </v-tab-item>
+          </v-tabs-items>
         </v-row>
       </v-container>
     </div>
@@ -79,40 +205,86 @@
 <script lang="ts">
 import Vue from "vue";
 
-export default Vue.extend({});
+export default Vue.extend({
+  data() {
+    return {
+      tab: null,
+    };
+  },
+});
 </script>
 
 <style scoped lang="scss">
-.row-custom {
-  margin-top: 250px;
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;500;600;700;800&display=swap");
+
+@media (min-width: 1700px) {
+  .row-custom-margin {
+    margin: 0px 300px 0px;
+  }
+  .row-custom {
+    margin: 250px 300px 0px;
+  }
+  .img-profile img {
+    position: absolute;
+    margin-left: 150px;
+    z-index: 1;
+    max-height: 550px;
+    max-width: 380px;
+  }
 }
+.hire-me-column {
+  margin-top: 70px;
+}
+.theme--dark.v-icon {
+  color: rgb(8, 228, 8);
+}
+.theme--dark.v-tabs-items {
+  background-color: transparent !important;
+}
+
+.theme--light.v-tabs-items {
+  background-color: transparent !important;
+}
+.row-custom {
+  margin-top: 150px;
+}
+
 .vue-logo {
+  transform: translateY(20px);
   z-index: 1;
 }
 .jsts-logo {
   z-index: 1;
-  height: 150px;
-  width: 150px;
+  height: 140px;
+  max-width: 140px;
   border-radius: 10px;
 }
 .img-profile img {
   position: absolute;
-  z-index: 1;
-  height: 420px;
-  width: 420px;
-  border-radius: 50%;
-  border: green 2px solid;
+  margin-left: 150px;
+  z-index: 2;
+  max-height: 50%;
+  max-width: 30%;
+}
+.tab-custom {
+  background-color: transparent !important;
 }
 .title-profile {
   font-size: 45px;
   color: rgb(8, 228, 8);
+}
+.exp-description {
+  font-size: 18px;
+  font-weight: 400;
 }
 .subtitle-profile {
   font-size: 45px;
   color: white;
 }
 .description-profile {
-  font-size: 15px;
+  font-size: 18px;
+
   color: white;
   font-weight: 300;
 }
@@ -122,6 +294,7 @@ export default Vue.extend({});
   width: 100%;
 }
 .navbar {
+  z-index: 1;
   overflow: hidden;
   background-color: rgba(0, 0, 0, 0.301);
   padding: 10px;
@@ -145,10 +318,10 @@ export default Vue.extend({});
 .navbar a:hover {
   color: rgb(19, 216, 19);
 }
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
 /* Main content */
 .main {
-  font-family: "Roboto", sans-serif;
+  font-family: "Oxanium", cursive;
   margin-top: 100px; /* Add a top margin to avoid content overlay */
 }
 
