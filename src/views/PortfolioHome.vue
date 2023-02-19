@@ -21,29 +21,29 @@
     </div>
 
     <div class="main">
-      <v-container
-        ><v-row class="row-custom-margin">
-          <v-col cols="6" class="hire-me-column">
+      <v-container>
+        <v-row justify="center">
+          <p class="name-title">Paulo André Brito de Almeida Junior</p></v-row
+        >
+        <v-row id="about">
+          <v-col class="hire-me-column">
             <p class="title-profile mt-12">Olá,</p>
             <p class="subtitle-profile">Eu me chamo Paulo André</p>
             <p class="description-profile">
               Sou um desenvolvedor front-end formado pela UNEB(Universidade do
-              Estado da Bahia) com mais de 4 anos de experiência. Tenho
-              trabalhado na area de desenvolvimento de sistemas e também de
-              gestão na epoca em que atuei como Presidente da Empresa Junior
-              Tecno System a qual sou conselheiro atualmente. Sou uma pessoa que
-              ama trabalhar em equipe e que tem uma fome gigantesca por
-              adiquirir novos conhecimentos. Desejo continuar agregando aonde
-              quer que eu passe com o meu trabalho e conhecimento para que eu
-              possa crescer profissionalmente cada vez mais e consiga alcançar
-              minhas ambições.
+              Estado da Bahia), trabalho na área de desenvolvimento há 4 anos,
+              com foco no desenvolvimento front end mais especificamente com Vue
+              Js, JavaScript e TypeScript com as quais trabalho atualmente na
+              GWCloud. Também tive experiencia em gestão de projetos na epoca em
+              que atuei como Presidente da Empresa Junior Tecno System a qual
+              sou conselheiro atualmente. Sou uma pessoa que ama trabalhar em
+              equipe e que tem uma fome gigantesca por adiquirir novos
+              conhecimentos, desejo continuar agregando aonde quer que eu passe
+              com o meu trabalho e conhecimento para que eu possa crescer
+              profissionalmente cada vez mais e consiga alcançar minhas
+              ambições.
             </p>
             <v-btn color="green" class="white--text mt-5">Me contrate</v-btn>
-          </v-col>
-          <v-col cols="6">
-            <div class="img-profile">
-              <img src="../assets/photo-2.png" alt="profile-img" />
-            </div>
           </v-col>
         </v-row>
         <v-row class="row-custom" align="center">
@@ -70,9 +70,7 @@
             </v-row>
           </v-col>
           <v-col cols="6">
-            <p class="title-profile mt-12">
-              <span style="color: white">Eu sou um</span> Programador
-            </p>
+            <p class="title-profile mt-12">Skillset</p>
 
             <p class="description-profile">
               Minha stack de tecnologias atual é Html, CSS, JavaScript,
@@ -81,32 +79,8 @@
               desenvolvimento mobile com o Flutter e modelagem de banco de dados
               MySQL e MongoDB.
             </p>
-            <v-row style="color: white">
-              <v-col cols="auto">Nome</v-col>
-              <v-col cols="auto">:</v-col>
-              <v-col cols="auto">Ṕaulo André Brito de Almeida Junior</v-col>
-            </v-row>
-            <v-row style="color: white">
-              <v-col cols="auto"
-                >Idade <span style="margin-left: 25px">:</span></v-col
-              >
 
-              <v-col cols="auto">23</v-col>
-            </v-row>
-
-            <v-row style="color: white">
-              <v-col cols="auto">E-mail</v-col>
-              <v-col cols="auto">:</v-col>
-              <v-col cols="auto">pauloandre.dev@gmail.com</v-col>
-            </v-row>
-            <v-row style="color: white">
-              <v-col cols="auto"
-                >Telefone <span style="margin-left: 3px">:</span></v-col
-              >
-
-              <v-col cols="auto">(75) 992909426</v-col>
-            </v-row>
-            <v-btn color="green" class="white--text mt-5"
+            <v-btn color="green" class="white--text mt-6"
               >Baixe meu Curriculo</v-btn
             >
           </v-col>
@@ -197,44 +171,113 @@
             </v-tab-item>
           </v-tabs-items>
         </v-row>
+        <v-row class="row-custom">
+          <v-col
+            ><span style="color: white; margin-left: 20px; font-size: 35px"
+              >Projetos</span
+            >
+            <hr style="margin-left: 23px; max-width: 95%"
+          /></v-col>
+        </v-row>
+        <v-row>
+          <v-col
+            ><CardProject
+              :title="'Gado na Bahia'"
+              :description="pokedexDescription"
+              :link="pokedexLink"
+            ></CardProject
+          ></v-col>
+          <v-col
+            ><CardProject
+              :title="'Site Tecno System'"
+              :description="memoryGameDescription"
+              :link="memoryGameLink"
+            ></CardProject
+          ></v-col>
+          <v-col
+            ><CardProject
+              :title="'Pokedex'"
+              :description="pokedexDescription"
+              :link="pokedexLink"
+            ></CardProject
+          ></v-col>
+          <v-col
+            ><CardProject
+              :title="'Jogo da Memória'"
+              :description="pokedexDescription"
+              :link="pokedexLink"
+            ></CardProject
+          ></v-col>
+        </v-row>
+        <v-row class="row-custom">
+          <v-col
+            ><span style="color: white; margin-left: 20px; font-size: 35px"
+              >Repositorios</span
+            >
+            <hr style="margin-left: 23px; max-width: 95%"
+          /></v-col>
+        </v-row>
+        <v-row>
+          <v-col
+            ><CardRepo
+              :title="'Pokedex'"
+              :description="pokedexDescription"
+              :link="pokedexLink"
+            ></CardRepo
+          ></v-col>
+          <v-col
+            ><CardRepo
+              :title="'Jogo da Memória'"
+              :description="memoryGameDescription"
+              :link="memoryGameLink"
+            ></CardRepo
+          ></v-col>
+          <v-col
+            ><CardRepo
+              :title="'Pokedex'"
+              :description="pokedexDescription"
+              :link="pokedexLink"
+            ></CardRepo
+          ></v-col>
+        </v-row>
       </v-container>
     </div>
   </div>
 </template>
 
-<script lang="ts">
-import Vue from "vue";
+<script setup lang="ts">
+import { ref } from "vue";
+import CardRepo from "../components/CardRepo.vue";
+import CardProject from "../components/CardProject.vue";
 
-export default Vue.extend({
-  data() {
-    return {
-      tab: null,
-    };
-  },
-});
+const pokedexDescription = ref<string>(
+  "Uma pokedex feita com Vue js onde você pode pesquisar por qualquer pokemon e olhar seus atributos"
+);
+const pokedexLink = ref<string>("https://github.com/paulo0056/pokedex-vue3");
+
+const memoryGameDescription = ref<string>(
+  "Um jogo da memoria bastante interessante do anime One Piece feito com HTML, CSS e javascript."
+);
+const memoryGameLink = ref<string>("https://github.com/paulo0056/memory-game");
+
+const tecnoSystemDescription = ref<string>(
+  "Site da empresa junior Tecno System"
+);
+const tecnoSystemLink = ref<string>("https://github.com/paulo0056/memory-game");
+const tab = ref<boolean>(false);
 </script>
 
 <style scoped lang="scss">
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;500;600;700;800&display=swap");
 
-@media (min-width: 1700px) {
-  .row-custom-margin {
-    margin: 0px 300px 0px;
-  }
-  .row-custom {
-    margin: 250px 300px 0px;
-  }
-  .img-profile img {
-    position: absolute;
-    margin-left: 150px;
-    z-index: 1;
-    max-height: 550px;
-    max-width: 380px;
-  }
-}
 .hire-me-column {
   margin-top: 70px;
+}
+.name-title {
+  font-size: 50px;
+  font-weight: 500;
+  color: white;
 }
 .theme--dark.v-icon {
   color: rgb(8, 228, 8);
@@ -323,6 +366,10 @@ export default Vue.extend({
 .main {
   font-family: "Oxanium", cursive;
   margin-top: 100px; /* Add a top margin to avoid content overlay */
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 50px;
 }
 
 /* Config BG Animated*/
@@ -362,7 +409,6 @@ body {
   overflow: hidden;
 }
 
-.page-bg,
 .animation-wrapper {
   position: fixed;
   top: 0;
