@@ -9,19 +9,19 @@
 
     <div class="navbar">
       <v-row justify="space-between">
-        <v-col> <a> Imagem home </a></v-col>
+        <!--  <v-col> <a> Imagem home </a></v-col> -->
         <v-col>
           <v-row justify="end" class="mr-2">
-            <router-link to="#projects" class="mt-3"> Projetos </router-link>
-            <router-link to="#about" class="mt-3"> Sobre </router-link>
-            <router-link to="#contact" class="mt-3"> Contato </router-link>
+            <a href="#about" class="mt-3"> Sobre </a>
+            <a href="#projects" class="mt-3"> Projetos </a>
+            <a href="#contact" class="mt-3"> Contato </a>
           </v-row>
         </v-col>
       </v-row>
     </div>
 
-    <div class="main">
-      <v-container>
+    <div>
+      <v-container class="main">
         <v-row justify="center">
           <p class="name-title">Paulo André Brito de Almeida Junior</p></v-row
         >
@@ -171,7 +171,7 @@
             </v-tab-item>
           </v-tabs-items>
         </v-row>
-        <v-row class="row-custom">
+        <v-row class="row-custom" id="projects">
           <v-col
             ><span style="color: white; margin-left: 20px; font-size: 35px"
               >Projetos</span
@@ -275,8 +275,9 @@
               :title="'Calculadora Js'"
               :description="'Uma calculadora em javascript'"
               :link="'https://github.com/paulo0056/Matrix-Animation'"
-              :is-typescript="true"
-              :is-node="true"
+              :is-html="true"
+              :is-css="true"
+              :is-javascript="true"
             ></CardRepo
           ></v-col>
           <v-col
@@ -303,9 +304,39 @@
               :description="'Repositorio do meu site de apresentação'"
               :link="'https://github.com/paulo0056/pauloandrejr.me'"
               :is-typescript="true"
-              :is-node="true"
+              :is-vue="true"
+              :is-css="true"
             ></CardRepo
           ></v-col>
+        </v-row>
+        <v-row class="row-custom" id="contact">
+          <v-col
+            ><span style="color: white; margin-left: 20px; font-size: 35px"
+              >Contato</span
+            >
+            <hr style="margin-left: 23px; max-width: 95%"
+          /></v-col>
+        </v-row>
+
+        <v-row justify="center" style="margin-top: 30px">
+          <ContactCard
+            :title="'Email: pauloandre.dev@gmail.com'"
+            :link="'https://mail.google.com/mail/u/0/#inbox'"
+          ></ContactCard>
+        </v-row>
+        <v-row justify="center" style="margin-top: 30px">
+          <ContactCard
+            :title="'Linkedin'"
+            :link="'https://www.linkedin.com/in/paulojr-dev/'"
+          ></ContactCard>
+          <ContactCard
+            :title="'Instagram'"
+            :link="'https://www.instagram.com/pauloandrejrr/'"
+          ></ContactCard>
+          <ContactCard
+            :title="'WhatsApp'"
+            :link="'https://api.whatsapp.com/send?phone=5575992909426'"
+          ></ContactCard>
         </v-row>
       </v-container>
     </div>
@@ -316,6 +347,7 @@
 import { ref } from "vue";
 import CardRepo from "../components/CardRepo.vue";
 import CardProject from "../components/CardProject.vue";
+import ContactCard from "../components/ContactCard.vue";
 
 const tab = ref<boolean>(false);
 </script>
@@ -325,7 +357,7 @@ const tab = ref<boolean>(false);
 @import url("https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;500;600;700;800&display=swap");
 
 .hire-me-column {
-  margin-top: 70px;
+  margin-top: 20px;
 }
 .name-title {
   font-size: 50px;
@@ -392,8 +424,9 @@ const tab = ref<boolean>(false);
 .navbar {
   z-index: 1;
   overflow: hidden;
-  background-color: rgba(0, 0, 0, 0.301);
+  background-color: rgba(0, 0, 0, 0.616);
   padding: 10px;
+  font-size: 25px;
   position: fixed; /* Set the navbar to fixed position */
   top: 0; /* Position the navbar at the top of the page */
   width: 100%; /* Full width */
@@ -419,7 +452,7 @@ const tab = ref<boolean>(false);
 .main {
   font-family: "Oxanium", cursive;
   margin-top: 100px; /* Add a top margin to avoid content overlay */
-  max-width: 1440px;
+  max-width: 1640px;
   margin-left: auto;
   margin-right: auto;
   padding: 50px;
