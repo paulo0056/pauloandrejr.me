@@ -183,29 +183,33 @@
           <v-col
             ><CardProject
               :title="'Gado na Bahia'"
-              :description="pokedexDescription"
-              :link="pokedexLink"
+              :description="'Site catalogo de vendas de gados na Bahia'"
+              :link="'https://gadonabahia.com.br/'"
+              :img="'gadonabahia.png'"
             ></CardProject
           ></v-col>
           <v-col
             ><CardProject
               :title="'Site Tecno System'"
-              :description="memoryGameDescription"
-              :link="memoryGameLink"
+              :description="'Site da empresa junior Tecno System'"
+              :link="'https://tecnosystemej.com.br/'"
+              :img="'tecnosystem.png'"
             ></CardProject
           ></v-col>
           <v-col
             ><CardProject
               :title="'Pokedex'"
-              :description="pokedexDescription"
-              :link="pokedexLink"
+              :description="'Uma pokedex feita com Vue js'"
+              :link="'https://paulo0056.github.io/pokedex-vue3/'"
+              :img="'pokedex.png'"
             ></CardProject
           ></v-col>
           <v-col
             ><CardProject
               :title="'Jogo da Memória'"
-              :description="pokedexDescription"
-              :link="pokedexLink"
+              :description="'Um jogo da memoria do anime One Piece'"
+              :link="'https://paulo0056.github.io/memory-game/pages/index.html'"
+              :img="'memory-game.png'"
             ></CardProject
           ></v-col>
         </v-row>
@@ -221,22 +225,85 @@
           <v-col
             ><CardRepo
               :title="'Pokedex'"
-              :description="pokedexDescription"
-              :link="pokedexLink"
+              :description="'Projeto pokedex repositorio'"
+              :link="'https://github.com/paulo0056/pokedex-vue3'"
+              :is-vue="true"
+              :is-typescript="true"
+              :is-css="true"
             ></CardRepo
           ></v-col>
           <v-col
             ><CardRepo
               :title="'Jogo da Memória'"
-              :description="memoryGameDescription"
-              :link="memoryGameLink"
+              :description="'Projeto jogo da memoria repositorio'"
+              :link="'https://github.com/paulo0056/memory-game'"
+              :is-html="true"
+              :is-css="true"
+              :is-javascript="true"
             ></CardRepo
           ></v-col>
           <v-col
             ><CardRepo
-              :title="'Pokedex'"
-              :description="pokedexDescription"
-              :link="pokedexLink"
+              :title="'TS Node Setup'"
+              :description="'Setup para projetos com Node e Typescript'"
+              :link="'https://github.com/paulo0056/ts-node-setup'"
+              :is-typescript="true"
+              :is-node="true"
+            ></CardRepo
+          ></v-col>
+          <v-col
+            ><CardRepo
+              :title="'Posts Node'"
+              :description="'Repositorio para estudos com Node Js'"
+              :link="'https://github.com/paulo0056/node-posts-study'"
+              :is-javascript="true"
+              :is-node="true"
+            ></CardRepo
+          ></v-col>
+          <v-col
+            ><CardRepo
+              :title="'Animação da Matrix'"
+              :description="'Uma animação da matrix para background'"
+              :link="'https://github.com/paulo0056/Matrix-Animation'"
+              :is-html="true"
+              :is-css="true"
+              :is-javascript="true"
+            ></CardRepo
+          ></v-col>
+          <v-col
+            ><CardRepo
+              :title="'Calculadora Js'"
+              :description="'Uma calculadora em javascript'"
+              :link="'https://github.com/paulo0056/Matrix-Animation'"
+              :is-typescript="true"
+              :is-node="true"
+            ></CardRepo
+          ></v-col>
+          <v-col
+            ><CardRepo
+              :title="'Clean Node API'"
+              :description="'Projeto para criação de API com DDD e TDD'"
+              :link="'https://github.com/paulo0056/clean-node-api'"
+              :is-typescript="true"
+              :is-node="true"
+            ></CardRepo
+          ></v-col>
+          <v-col
+            ><CardRepo
+              :title="'User API Node'"
+              :description="'Api de criação de usuarios para estudo'"
+              :link="'https://github.com/paulo0056/user-api-node'"
+              :is-typescript="true"
+              :is-node="true"
+            ></CardRepo
+          ></v-col>
+          <v-col
+            ><CardRepo
+              :title="'pauloandre.me'"
+              :description="'Repositorio do meu site de apresentação'"
+              :link="'https://github.com/paulo0056/pauloandrejr.me'"
+              :is-typescript="true"
+              :is-node="true"
             ></CardRepo
           ></v-col>
         </v-row>
@@ -250,20 +317,6 @@ import { ref } from "vue";
 import CardRepo from "../components/CardRepo.vue";
 import CardProject from "../components/CardProject.vue";
 
-const pokedexDescription = ref<string>(
-  "Uma pokedex feita com Vue js onde você pode pesquisar por qualquer pokemon e olhar seus atributos"
-);
-const pokedexLink = ref<string>("https://github.com/paulo0056/pokedex-vue3");
-
-const memoryGameDescription = ref<string>(
-  "Um jogo da memoria bastante interessante do anime One Piece feito com HTML, CSS e javascript."
-);
-const memoryGameLink = ref<string>("https://github.com/paulo0056/memory-game");
-
-const tecnoSystemDescription = ref<string>(
-  "Site da empresa junior Tecno System"
-);
-const tecnoSystemLink = ref<string>("https://github.com/paulo0056/memory-game");
 const tab = ref<boolean>(false);
 </script>
 

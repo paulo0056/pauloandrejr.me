@@ -1,6 +1,6 @@
 <template>
-  <v-card class="mx-auto project-card" max-width="344">
-    <v-img src="../assets/gadonabahia.png" height="200px" cover></v-img>
+  <v-card class="mx-auto project-card pa-4" max-width="344">
+    <v-img :src="require(`@/assets/${img}`)" height="200px" cover></v-img>
     <v-card-title> {{ props.title }} </v-card-title>
 
     <v-card-subtitle style="color: white">
@@ -21,12 +21,13 @@ export interface Props {
   title: string;
   description: string;
   link: string;
+  img?: string;
 }
 const props = withDefaults(defineProps<Props>(), {
   title: "Titulo",
-  description: "Descrição",
   link: "Link",
 });
+const img = ref<string | undefined>(props.img);
 
 const goToGithub = () => {
   window.open(props.link);
