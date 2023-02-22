@@ -228,7 +228,7 @@
         <v-row class="row-custom repo-title">
           <v-col
             ><span style="color: white; margin-left: 20px; font-size: 35px"
-              >Repositorios</span
+              >Repos</span
             >
             <hr style="margin-left: 23px; max-width: 95%"
           /></v-col>
