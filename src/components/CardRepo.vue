@@ -3,7 +3,7 @@
     <v-img src="../assets/repo-img.png" height="200px" cover></v-img>
     <v-card-title> {{ props.title }} </v-card-title>
 
-    <v-card-subtitle style="color: white">
+    <v-card-subtitle style="color: white; font-size: 15px">
       {{ props.description }}
     </v-card-subtitle>
 

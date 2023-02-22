@@ -23,7 +23,7 @@
     <div>
       <v-container class="main">
         <v-row justify="center">
-          <p class="name-title">Paulo André Brito de Almeida Junior</p></v-row
+          <p class="name-title">Paulo Andre Brito de Almeida Junior</p></v-row
         >
         <v-row id="about">
           <v-col class="hire-me-column">
@@ -85,7 +85,7 @@
             </p>
           </v-col>
         </v-row>
-        <v-row class="row-custom">
+        <v-row class="row-custom exp-title">
           <v-col
             ><span style="color: white; margin-left: 20px; font-size: 35px"
               >Exp</span
@@ -117,20 +117,32 @@
               <v-card flat class="tab-custom">
                 <v-card-text style="color: white">
                   <h2>Estagiário</h2>
-                  <h3 style="color: rgb(8, 228, 8); font-weight: 700">
+                  <h3
+                    style="
+                      color: rgb(8, 228, 8);
+                      font-weight: 700;
+                      font-size: 17px;
+                    "
+                  >
                     GWCloud
                   </h3>
-                  <p style="font-size: 15px">2021</p>
+                  <p style="font-size: 17px">2021</p>
                   <p style="max-width: 1100px" class="exp-description">
                     Participação das plainnings e atuando na programação
                     front-end nos sistemas web da empresa, usando javascript,
                     typescript, Vue e design patterns como DDD e TDD
                   </p>
                   <h2>Programador Junior</h2>
-                  <h3 style="color: rgb(8, 228, 8); font-weight: 700">
+                  <h3
+                    style="
+                      color: rgb(8, 228, 8);
+                      font-size: 17px;
+                      font-weight: 700;
+                    "
+                  >
                     GWCloud
                   </h3>
-                  <p style="font-size: 15px">2022-Atualmente</p>
+                  <p style="font-size: 17px">2022-Atualmente</p>
                   <p style="max-width: 1100px" class="exp-description">
                     Participação das plainnings e atuando na programação
                     front-end nos sistemas web da empresa, usando javascript,
@@ -213,7 +225,7 @@
             ></CardProject
           ></v-col>
         </v-row>
-        <v-row class="row-custom">
+        <v-row class="row-custom repo-title">
           <v-col
             ><span style="color: white; margin-left: 20px; font-size: 35px"
               >Repositorios</span
@@ -222,26 +234,6 @@
           /></v-col>
         </v-row>
         <v-row>
-          <v-col
-            ><CardRepo
-              :title="'Pokedex'"
-              :description="'Projeto pokedex repositorio'"
-              :link="'https://github.com/paulo0056/pokedex-vue3'"
-              :is-vue="true"
-              :is-typescript="true"
-              :is-css="true"
-            ></CardRepo
-          ></v-col>
-          <v-col
-            ><CardRepo
-              :title="'Jogo da Memória'"
-              :description="'Projeto jogo da memoria repositorio'"
-              :link="'https://github.com/paulo0056/memory-game'"
-              :is-html="true"
-              :is-css="true"
-              :is-javascript="true"
-            ></CardRepo
-          ></v-col>
           <v-col
             ><CardRepo
               :title="'TS Node Setup'"
@@ -258,26 +250,6 @@
               :link="'https://github.com/paulo0056/node-posts-study'"
               :is-javascript="true"
               :is-node="true"
-            ></CardRepo
-          ></v-col>
-          <v-col
-            ><CardRepo
-              :title="'Animação da Matrix'"
-              :description="'Uma animação da matrix para background'"
-              :link="'https://github.com/paulo0056/Matrix-Animation'"
-              :is-html="true"
-              :is-javascript="true"
-              :is-css="true"
-            ></CardRepo
-          ></v-col>
-          <v-col
-            ><CardRepo
-              :title="'Calculadora Js'"
-              :description="'Uma calculadora em javascript'"
-              :link="'https://github.com/paulo0056/Matrix-Animation'"
-              :is-html="true"
-              :is-css="true"
-              :is-javascript="true"
             ></CardRepo
           ></v-col>
           <v-col
@@ -300,6 +272,48 @@
           ></v-col>
           <v-col
             ><CardRepo
+              :title="'Pokedex'"
+              :description="'Projeto pokedex repositorio'"
+              :link="'https://github.com/paulo0056/pokedex-vue3'"
+              :is-vue="true"
+              :is-typescript="true"
+              :is-css="true"
+            ></CardRepo
+          ></v-col>
+          <v-col
+            ><CardRepo
+              :title="'Jogo da Memória'"
+              :description="'Projeto jogo da memoria repositorio'"
+              :link="'https://github.com/paulo0056/memory-game'"
+              :is-html="true"
+              :is-css="true"
+              :is-javascript="true"
+            ></CardRepo
+          ></v-col>
+
+          <v-col
+            ><CardRepo
+              :title="'Animação da Matrix'"
+              :description="'Uma animação da matrix para background'"
+              :link="'https://github.com/paulo0056/Matrix-Animation'"
+              :is-html="true"
+              :is-javascript="true"
+              :is-css="true"
+            ></CardRepo
+          ></v-col>
+          <v-col
+            ><CardRepo
+              :title="'Calculadora Js'"
+              :description="'Uma calculadora em javascript'"
+              :link="'https://github.com/paulo0056/Matrix-Animation'"
+              :is-html="true"
+              :is-css="true"
+              :is-javascript="true"
+            ></CardRepo
+          ></v-col>
+
+          <v-col
+            ><CardRepo
               :title="'pauloandre.me'"
               :description="'Repositorio do meu site de apresentação'"
               :link="'https://github.com/paulo0056/pauloandrejr.me'"
@@ -320,12 +334,6 @@
 
         <v-row justify="center" style="margin-top: 30px">
           <ContactCard
-            :title="'Email: pauloandre.dev@gmail.com'"
-            :link="'https://mail.google.com/mail/u/0/#inbox'"
-          ></ContactCard>
-        </v-row>
-        <v-row justify="center" style="margin-top: 30px">
-          <ContactCard
             :title="'Linkedin'"
             :link="'https://www.linkedin.com/in/paulojr-dev/'"
           ></ContactCard>
@@ -336,6 +344,13 @@
           <ContactCard
             :title="'WhatsApp'"
             :link="'https://api.whatsapp.com/send?phone=5575992909426'"
+          ></ContactCard>
+        </v-row>
+        <v-row justify="center" style="margin-top: 30px">
+          <ContactCard
+            :title="'Email: pauloandre.dev@gmail.com'"
+            :link="'https://mail.google.com/mail/u/0/#inbox'"
+            :width="'420'"
           ></ContactCard>
         </v-row>
         <v-row justify="center" class="row-custom"
@@ -363,8 +378,9 @@ const tab = ref<boolean>(false);
 </script>
 
 <style scoped lang="scss">
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;500;600;700;800&display=swap");
+@import url("https://fonts.cdnfonts.com/css/karmatic-arcade");
+@import url("https://fonts.cdnfonts.com/css/war-eagle-condensed");
 
 .hire-me-column {
   margin-top: 20px;
@@ -373,6 +389,7 @@ const tab = ref<boolean>(false);
   font-size: 50px;
   font-weight: 500;
   color: white;
+  font-family: "Karmatic Arcade", sans-serif;
 }
 .theme--dark.v-icon {
   color: rgb(8, 228, 8);
@@ -419,23 +436,38 @@ const tab = ref<boolean>(false);
   max-height: 50%;
   max-width: 30%;
 }
+#projects {
+  font-family: "War Eagle", sans-serif;
+}
+
+#contact {
+  font-family: "War Eagle", sans-serif;
+}
 .tab-custom {
   background-color: transparent !important;
 }
 .title-profile {
   font-size: 45px;
   color: rgb(8, 228, 8);
+  font-family: "War Eagle", sans-serif;
+}
+.repo-title {
+  font-family: "War Eagle", sans-serif;
 }
 .exp-description {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 400;
+}
+.exp-title {
+  font-family: "War Eagle", sans-serif;
 }
 .subtitle-profile {
   font-size: 45px;
+  font-family: "War Eagle Condensed", sans-serif;
   color: white;
 }
 .description-profile {
-  font-size: 18px;
+  font-size: 22px;
 
   color: white;
   font-weight: 300;
@@ -450,7 +482,7 @@ const tab = ref<boolean>(false);
   overflow: hidden;
   background-color: rgba(0, 0, 0, 0.616);
   padding: 10px;
-  font-size: 25px;
+  font-size: 22px;
   position: fixed; /* Set the navbar to fixed position */
   top: 0; /* Position the navbar at the top of the page */
   width: 100%; /* Full width */

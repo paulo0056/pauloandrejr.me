@@ -2,7 +2,7 @@
   <v-card
     class="mx-auto contact-card rounded-0"
     @click="goToGithub"
-    max-width="484"
+    :width="props.width"
   >
     <v-card-title> {{ props.title }} </v-card-title>
   </v-card>
@@ -13,11 +13,13 @@ import { defineProps, withDefaults } from "vue";
 export interface Props {
   title: string;
   link: string;
+  width?: string;
 }
 const props = withDefaults(defineProps<Props>(), {
   title: "Titulo",
   description: "Descrição",
   link: "Link",
+  width: "190",
 });
 
 const goToGithub = () => {
@@ -29,8 +31,9 @@ const goToGithub = () => {
 .contact-card {
   margin: 0 !important;
   background-color: rgba(15, 202, 15, 0.377);
-  padding-left: 40px;
-  padding-right: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+
   color: white;
   border: 5px solid rgb(0, 211, 0);
   cursor: pointer;
