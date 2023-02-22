@@ -354,12 +354,12 @@
           ></ContactCard>
         </v-row>
         <v-row justify="center" class="row-custom"
-          ><span style="color: white; margin-left: 20px; font-size: 25px"
+          ><span style="color: white; margin-left: 20px" class="rights-reserved"
             >© 2023 Paulo André.</span
           ></v-row
         >
         <v-row justify="center"
-          ><span style="color: white; margin-left: 20px; font-size: 25px"
+          ><span style="color: white; margin-left: 20px" class="rights-reserved"
             >Todos os direitos reservados.</span
           ></v-row
         >
@@ -390,6 +390,12 @@ const tab = ref<boolean>(false);
   font-weight: 500;
   color: white;
   font-family: "Karmatic Arcade", sans-serif;
+}
+
+@media (max-width: 380px) {
+  .rights-reserved {
+    font-size: 15px;
+  }
 }
 .theme--dark.v-icon {
   color: rgb(8, 228, 8);

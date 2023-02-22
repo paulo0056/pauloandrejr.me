@@ -33,7 +33,6 @@ const goToGithub = () => {
   background-color: rgba(15, 202, 15, 0.377);
   padding-left: 20px;
   padding-right: 20px;
-
   color: white;
   border: 5px solid rgb(0, 211, 0);
   cursor: pointer;
