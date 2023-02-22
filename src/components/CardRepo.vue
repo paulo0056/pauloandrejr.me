@@ -8,63 +8,72 @@
     </v-card-subtitle>
 
     <v-card-actions>
-      <v-btn color="orange-lighten-2" small variant="text" @click="goToGithub">
-        Explore
-      </v-btn>
-      <v-btn
-        v-if="props.isVue"
-        class="tag-tech"
-        small
-        color="green"
-        variant="text"
+      <v-row class="pa-3">
+        <v-btn
+          class="ma-2"
+          color="orange-lighten-2"
+          small
+          variant="text"
+          @click="goToGithub"
+        >
+          Explore
+        </v-btn>
+        <v-btn
+          v-if="props.isVue"
+          class="tag-tech ma-2"
+          small
+          color="green"
+          variant="text"
+        >
+          VUE JS
+        </v-btn>
+        <v-btn
+          v-if="props.isTypescript"
+          class="tag-tech ma-2"
+          color="blue"
+          small
+          variant="text"
+        >
+          Typescript
+        </v-btn>
+        <v-btn
+          v-if="props.isHtml"
+          class="tag-tech ma-2"
+          small
+          color="orange"
+          variant="text"
+        >
+          HTML
+        </v-btn>
+        <v-btn
+          v-if="props.isJavascript"
+          class="tag-tech ma-2"
+          color="yellow"
+          variant="text"
+          small
+        >
+          Javascript
+        </v-btn>
+        <v-btn
+          v-if="props.isCss"
+          class="tag-tech ma-2"
+          small
+          color="pink"
+          variant="text"
+        >
+          CSS
+        </v-btn>
+
+        <v-btn
+          v-if="props.isNode"
+          class="tag-tech ma-2"
+          small
+          color="#FFF59D"
+          variant="text"
+        >
+          NODE
+        </v-btn></v-row
       >
-        VUE JS
-      </v-btn>
-      <v-btn
-        v-if="props.isTypescript"
-        class="tag-tech"
-        color="blue"
-        small
-        variant="text"
-      >
-        Typescript
-      </v-btn>
-      <v-btn
-        v-if="props.isHtml"
-        class="tag-tech"
-        small
-        color="orange"
-        variant="text"
-      >
-        HTML
-      </v-btn>
-      <v-btn
-        v-if="props.isCss"
-        class="tag-tech"
-        small
-        color="pink"
-        variant="text"
-      >
-        CSS
-      </v-btn>
-      <v-btn
-        v-if="props.isJavascript"
-        class="tag-tech"
-        color="yellow"
-        variant="text"
-        small
-      >
-        Javascript
-      </v-btn>
-      <v-btn
-        v-if="props.isNode"
-        class="tag-tech"
-        small
-        color="#FFF59D"
-        variant="text"
-      >
-        NODE
-      </v-btn>
     </v-card-actions>
   </v-card>
 </template>

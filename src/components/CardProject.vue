@@ -9,7 +9,7 @@
 
     <v-card-actions>
       <v-btn color="orange-lighten-2" variant="text" @click="goToGithub">
-        Explore
+        VISITAR
       </v-btn>
     </v-card-actions>
   </v-card>

@@ -43,11 +43,15 @@
               profissionalmente cada vez mais e consiga alcançar minhas
               ambições.
             </p>
-            <v-btn color="green" class="white--text mt-5">Me contrate</v-btn>
+            <v-btn color="green" class="white--text mt-5">
+              <a href="#contact" style="text-decoration: none; color: white">
+                Me contrate
+              </a></v-btn
+            >
           </v-col>
         </v-row>
         <v-row class="row-custom" align="center">
-          <v-col cols="6">
+          <v-col xs="12" sm="12" md="12" lg="6" xl="6">
             <v-row justify="center" align="end">
               <img
                 src="../assets/js-logo.png"
@@ -69,7 +73,7 @@
               />
             </v-row>
           </v-col>
-          <v-col cols="6">
+          <v-col cols="12" sm="12" md="12" lg="6" xl="6">
             <p class="title-profile mt-12">Skillset</p>
 
             <p class="description-profile">
@@ -79,10 +83,6 @@
               desenvolvimento mobile com o Flutter e modelagem de banco de dados
               MySQL e MongoDB.
             </p>
-
-            <v-btn color="green" class="white--text mt-6"
-              >Baixe meu Curriculo</v-btn
-            >
           </v-col>
         </v-row>
         <v-row class="row-custom">
@@ -266,8 +266,8 @@
               :description="'Uma animação da matrix para background'"
               :link="'https://github.com/paulo0056/Matrix-Animation'"
               :is-html="true"
-              :is-css="true"
               :is-javascript="true"
+              :is-css="true"
             ></CardRepo
           ></v-col>
           <v-col
@@ -338,6 +338,16 @@
             :link="'https://api.whatsapp.com/send?phone=5575992909426'"
           ></ContactCard>
         </v-row>
+        <v-row justify="center" class="row-custom"
+          ><span style="color: white; margin-left: 20px; font-size: 25px"
+            >© 2023 Paulo André.</span
+          ></v-row
+        >
+        <v-row justify="center"
+          ><span style="color: white; margin-left: 20px; font-size: 25px"
+            >Todos os direitos reservados.</span
+          ></v-row
+        >
       </v-container>
     </div>
   </div>
@@ -387,6 +397,20 @@ const tab = ref<boolean>(false);
   height: 140px;
   max-width: 140px;
   border-radius: 10px;
+}
+@media (max-width: 620px) {
+  .vue-logo {
+    transform: translateY(20px);
+    height: 120px;
+    max-width: 120px;
+    z-index: 1;
+  }
+  .jsts-logo {
+    z-index: 1;
+    height: 70px;
+    max-width: 70px;
+    border-radius: 10px;
+  }
 }
 .img-profile img {
   position: absolute;
